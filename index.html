@@ -1,0 +1,155 @@
+<!!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Fontdiner+Swanky|Rochester" rel="stylesheet">
+<title>ArtGallery</title>
+<style>
+	body {
+	font-family: helvetica;
+	margin: 0 auto;
+	max-width: 800px;
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs1EaV3gRqMYJglAf7M5iMtXLGr3SPNDzPJexh7HsJx1IBORHQeg");
+	background-size: 100%;
+	background-repeat: repeat-y;
+	background-position: center;
+	}
+	h1{
+	text-align: center;
+	font-family: 'Fontdiner Swanky', cursive;
+	font-size: 70px;
+	color: #E91E63;
+	margin: 15px 0 0 0;
+	}
+	h2{
+	text-align: center;
+	font-family: 'Rochester', cursive;
+	font-size:25px;
+	color: #F48FB1;
+	margin: 0 0 10px 0;
+	}
+	div{
+	background-size: 100% 100%;
+	background-position: center no repeat;
+	height: 300px;
+	margin: 45px;
+	border: 5px solid #D32F2F;
+	border-radius: 10px;
+	position: relative;
+	}
+	.first{
+	background-image: url("http://www.indiaart.com/Paintings/61/Large/12920.jpg");
+	}
+	.second{
+	background-image: url("http://wisetoast.com/wp-content/uploads/2015/10/landscape-with-the-fall-of-icarus-pieter-bruegel2.jpg");
+	}
+	.third{
+	background-image: url("http://wisetoast.com/wp-content/uploads/2015/10/The-Flower-Carrier-diego-rivera-painting.jpg");
+	}
+	.forth{
+	background-image: url("http://www.indiaart.com/Paintings/1249/Large/8412.jpg");
+	}
+	.fifth{
+	background-image: url("http://wisetoast.com/wp-content/uploads/2015/10/Massacre-of-the-Innocents-painting.jpg");
+	}
+	p{
+	background-color: #1A237E;
+	color: white;
+	text-align: justify;
+	position: absolute;
+	bottom: 0;
+	margin: 0;
+	font-size: 20px;
+	padding: 10px;
+	line-height: 20px;
+	background: linear-gradient(bottom, rgba(26,35,0,1), rgba(26,35,126,0.2));
+	background: -webkit-linear-gradient(bottom, rgba(26,35,0,1), rgba(26,35,126,0.2));
+	background: -moz-linear-gradient(bottom, rgba(26,35,0,1), rgba(26,35,126,0.2));
+	height: 40px;
+	transition: height 10s;
+	-webkit-transition: height 0.5s;
+	-moz-transition: -moz-height 0.5s;
+	}
+	small{
+	font-size: 16px;
+	opacity: 0;
+	}
+	.price{
+	float: right;
+	}
+	@media(max-width:600px){
+	h1{
+		font-size: 40px;
+	}
+	h2{ 
+		font-size: 20px;
+	}
+	div{
+	margin: 20px 12px 0 12px;
+	}
+	p{
+		height: 40px;
+		font-size: 18px;
+	}
+	small{
+		font-size: 12px;
+	}
+	}
+	.show-description p{
+	height: 260px;
+	}
+	.show-description small{
+	opacity: 1;
+	}
+</style>
+</head>
+<body>
+	<h1> Art Gallery </h1>
+	<h2>"A Sale Of Art"</h2>
+	
+	<div class="first">
+	<p>Docking At Banaras Ghat <span class="price">$1000</span></br>
+		-By Lasya Banerjee</br>
+		<small>Ghats in Varanasi are riverfront steps leading to the banks of the River Ganges.
+		Most Varanasi ghats were built after 1700 AD, when the city was part of Maratha Empire.</small> </p>
+	</div>
+	
+	<div class="second">
+	<p>The Fall of Icarus <span class="price">$800</span></br>
+		-By Pieter Brugel</br>
+		<small>This painting by Dutch artist Pieter Bruegel shows man’s indifference to the suffering of his fellowmen. 
+		It is a powerful theme shown in a rather simple way with Icarus, 
+		the Greek character suffering under water and people going on with their work.</small></p>
+	</div>
+	
+	<div class="third">	
+	<p>The Flower Carrier <span class="price">$500</span></br>
+		-By Diego Rivera</br>
+		<small>Painted by the most popular Mexican painter of the 20th century, 
+		this painting shows how a person is struggling to carry a huge flower basket on his back. 
+		Its bright colors are a trademark of Diego Rivera.</small></p>
+	</div>
+	
+	<div class="forth">
+	<p>Back To Home <span class="price">$600</span></br>
+		-By Vishwajeet Singh</br>
+		<small>Painted by an Indian painter, this painting depicts the scene of villages in India, when a farmer returns back to his home
+		after allday long hard-work. This beautiful painting is deep in meaning showing the rural face of India.</small></p>
+	</div>
+	
+	<div class="fifth">
+	<p>Massacre of the Innocents <span class="price">$900</span></br>
+		-By Peter Paul Rubens</br>
+		<small>Based on the biblical massacre of innocents in Bethlehem, 
+		this painting by Peter Paul Rubens strikes a chilling note in the minds of viewers.
+		This painting is an excellent example of pointillism, where many dots are joined together to create an image.</small></p>
+	</div>
+	<script>
+		$('div').hover(function(){
+		$(this).addClass('show-description');
+		}, function(){
+		$(this).removeClass('show-description');
+		});
+	</script>
+</body>
+</html>
